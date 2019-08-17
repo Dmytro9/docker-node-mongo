@@ -1,0 +1,49 @@
+Docker
+
+run apps in containers.
+
+sudo docker-compose up
+sudo docker-compose down (remove? containers)
+
+
+// See runnign containers
+docker ps
+
+
+// See all containers existed
+docker ps -a
+
+
+// Start container
+docker start d6ca9b8326db (container id)
+
+or
+docker run -d <container_name>
+
+
+// Stop container
+docker stop d6ca9b8326db (container id)
+
+
+// Remove container ( container has to be stoped)
+docker rm d6ca9b8326db (container id)
+
+
+// Remove containers running
+docker container prune
+
+
+// See images
+docker images
+
+
+// Remove images
+docker images prune
+
+
+
+// Remove images containers volumes networks (that not currently in use)
+docker system prune
+
+// Remove images containers volumes networks
+docker system prune -a
