@@ -1,5 +1,7 @@
 Docker
 
+pull the image from docker hub and create the image ( docker run <name-image> ) - pull and run container from it
+
 run apps in containers.
 
 sudo docker-compose up
@@ -47,3 +49,54 @@ docker system prune
 
 // Remove images containers volumes networks
 docker system prune -a
+
+
+// Problem - developing and shipping the apps
+set up enviroment
+deploying to server with correct version
+
+
+// Image
+package, template, plan uses to create one or more containers
+
+
+// Container
+running instance of image
+
+
+// Add env vaiable 
+docker run -e APP_COLOR=blue <container name>
+
+
+// Inspect the property of running container
+docker inspect <container name> 
+
+
+// Create image ( build )
+docker build -t dimapol/my-custom-app .
+
+// Push image
+docker push dimapol/my-custom-app
+
+
+// COPY RUN
+copy - copy file from local to docker image
+run - cmd to execute
+
+
+// Docker data storing
+/var/lib/docker
+containers
+volumes
+images
+
+
+// Volume - save data (from db ext...)
+docker run -v data_volume:/var/lib/mysql mysql
+docker run -v /data/mysql:/var/lib/mysql mysql 
+
+docker run \ --mount type=bind,sourse=/data/mysql, target=/var/lib/mysql mysql 
+
+
+// Depends on 
+specify to be start first

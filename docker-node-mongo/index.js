@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Connect to MongoDB
 mongoose
   .connect(
-    'mongodb://localhost:27017/myapp',
+    'mongodb://mongo:27017/docker-node-mongo',
     { useNewUrlParser: true }
   )
-  .then(() => console.log('MongoDB Connected'))
+  .then(() => console.log('MongoDB scsonnected'))
   .catch(err => console.log(err));
 
 const Item = require('./models/Item');
