@@ -1,0 +1,55 @@
+Docker - platform to run the containers.
+
+* Why: Docker make easy to install and run software without worring about setup or dependencies.
+
+Image - single file wirh all dep and config
+Container of instance of container
+
+
+// See ls of image
+- docker run <image name> ls
+
+
+
+// Docker Run
+docker run = docker create + docker start
+
+
+// Create container
+docker create hello-world
+
+// Start container
+docker start -a <container id>
+
+
+// logs
+docker logs <container id> 
+
+
+// Stop container use!
+docker stop <container id>   
+
+
+// Kill container
+docker kill <container id> 
+
+
+// Exec a command in specific container
+docker exec -it <container id> <command>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
