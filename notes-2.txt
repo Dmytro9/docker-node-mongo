@@ -6,36 +6,83 @@ Image - single file wirh all dep and config
 Container of instance of container
 
 
-// See ls of image
+# See ls of image
 - docker run <image name> ls
 
 
 
-// Docker Run
+# Docker Run
 docker run = docker create + docker start
 
 
-// Create container
+# Create container
 docker create hello-world
 
-// Start container
+# Start container
 docker start -a <container id>
 
 
-// logs
+# logs
 docker logs <container id> 
 
 
-// Stop container use!
+# Stop container use!
 docker stop <container id>   
 
 
-// Kill container
+# Kill container
 docker kill <container id> 
 
 
-// Exec a command in specific container
+# Exec a command in specific container
 docker exec -it <container id> <command>
+
+
+# Get empty running container with open shall for enter command
+docker run it <image name> sh
+
+ex: touch <file>
+
+
+
+# CREATE THE IMAGE
+Dockerfile->Docker client->Docker server->Usable Image
+
+
+# Generate image ( dimapol|ironsource/node-mongo-app:lates|1 )
+docker build .  # => id
+docker build -t <docker id>/<app name>:<version> .
+
+
+
+# Run as a container ( lates will get by default )
+docker run <docker id>/<app name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
