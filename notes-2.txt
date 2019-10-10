@@ -7,8 +7,7 @@ Container of instance of container
 
 
 # See ls of image
-- docker run <image name> ls
-
+docker run -it <image name> ls
 
 
 # Docker Run
@@ -34,7 +33,7 @@ docker stop <container id>
 docker kill <container id> 
 
 
-# Exec a command in specific container
+# Exec a command in specific container ( sh )
 docker exec -it <container id> <command>
 
 
@@ -59,6 +58,15 @@ docker build -t <docker id>/<app name>:<version> .
 docker run <docker id>/<app name>
 
 
+# Alpine - Small image without preinstalled additional programs ( git, etc.. )
+FROM node:alpine
+
+
+# Delete image
+docker rmi <image name>|<image id> 
+
+
+# It's not good to copy local files into container root directory ( to not conflict with the file / folders names )
 
 
 
