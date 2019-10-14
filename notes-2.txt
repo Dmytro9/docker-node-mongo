@@ -71,6 +71,27 @@ docker rmi <image name>|<image id>
 
 
 
+# Rebuild image in docker compose
+docker-compose up --build
+
+
+# Stop and remove containers
+docker-compose down
+
+
+# Status containers inside of docker-compose file ( in docker-compose directory )
+docker-compose ps
+
+
+# Set .dockerignore
+node_modules/
+
+
+# Run docker with custome name Dockerfile.dev
+docker build -f Dockerfile.dev .
+
+
+
 
 
 
