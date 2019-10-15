@@ -1,0 +1,20 @@
+version: '3'
+
+services: 
+  web:
+    build: # build from custom Dockerfile.dev
+      context: . # path from where to create
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules # do not try to map a folder node_modules inside the container
+      - Test1:/var/volume # map current dir ( my app - frontend ) to dir inside the container
+
+volumes:
+  Test1:
+
+
+
+
+ # i5!S@TnWkWeyT3P   

@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  node-app:
+    build: .
+    restart: always
+    ports:
+     - "5000:5000"
+    volumes:
+      - Test2:/src/app/log
+
+  logzio:
+    image: logzio/logzio-rsyslog-shipper
+    depends_on:
+      - node-app
+    volumes:
+      - Test2:/var/log/logzio       
+
+    environment:
+      LOGZIO_USER_TOKEN: RZqFIwKiNJcmRzDVoREzhMAUEPlAwZnB
+      # MONITOR_FILE_PATH: ./log.log
+      MONITOR_FILE_TYPE: "myapp"
+
+
+volumes:
+  Test2:  

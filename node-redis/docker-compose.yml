@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always # 'no', on-failure, unless-stopped, never
+    build: .
+    ports:
+     - "4001:8081" # map entered request port to port in node app ( container listening ) 
