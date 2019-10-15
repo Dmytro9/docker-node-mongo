@@ -69,6 +69,36 @@ docker rmi <image name>|<image id>
 # It's not good to copy local files into container root directory ( to not conflict with the file / folders names )
 
 
+# Docker compose
+it's like docker cli
+can be done without docker-compse file, but it's more comfortable
+and for starting multiply containers at the same time
+and connect them together in utomayed fashion
+
+to connect node and redis containers
+ - in connection redis client specify <service name> from docker-compose file
+
+
+# Run with docker-compose.yml
+docker-compose up # will automatically create network between containers
+
+# Run and rebuild with docker-compose.yml
+docker-compose up --build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

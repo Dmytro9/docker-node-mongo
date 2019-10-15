@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  redis-server:
+    image: 'redis'
+
+  node-app:
+    build: .  # not from hosted image but local Dockerfile
+    ports:
+      - '8081:8081' # port<local mashine>:<inside the container>
