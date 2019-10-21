@@ -109,7 +109,7 @@ docker-compose up --build
 docker-compose down
 
 
-# Status containers inside of docker-compose file ( in docker-compose directory )
+# Running status containers inside of docker-compose file ( in docker-compose directory )
 docker-compose ps
 
 
@@ -117,8 +117,27 @@ docker-compose ps
 node_modules/
 
 
-# Run docker with custome name Dockerfile.dev
+# Run docker / build image with custome name Dockerfile.dev
 docker build -f Dockerfile.dev .
+
+
+
+# Run tests / will be rerun tests
+docker exec -it <image id> npm run test
+
+
+
+# 
+
+
+
+
+
+
+
+
+
+
 
 
 
